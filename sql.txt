@@ -4,6 +4,12 @@ set x_mark_package = 'sdf', x_check_ma_flag='Y'
 where row_id = '1-1PU39';
 commit;
 
+update s_contact
+set x_mark_package='Базовый',
+x_check_ma_flag = 'Y'
+where row_id = '1-1X8XB';
+commit;
+
 //клиент: Обновление пенсионного статуса на "Пенсионер"
 UPDATE siebel.S_CONTACT_X
 SET X_PENSION_STATUS = 'Пенсионер'
