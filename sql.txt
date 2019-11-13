@@ -1,0 +1,79 @@
+//клиент: Обновление ДКО
+update s_contact  
+set x_mark_package = 'sdf', x_check_ma_flag='Y'
+where row_id = '1-1PU39';
+commit;
+
+//клиент: Обновление пенсионного статуса на "Пенсионер"
+UPDATE siebel.S_CONTACT_X
+SET X_PENSION_STATUS = 'Пенсионер'
+WHERE ROW_ID = '1-E9Y50N';
+
+//клиент: нет пенсионного статуса
+UPDATE S_CONTACT_X
+SET X_PENSION_STATUS = ''
+WHERE ROW_ID = '1-E9Y50N';
+
+//поиск клиента по ID и его пенсионного статуса
+select PAR_ROW_ID, ROW_ID, X_PENSION_STATUS
+from siebel.S_CONTACT_X
+where ROW_ID = '1-E9Y50N';
+
+//
+select X_CURRENT_SR_ID
+from S_OPTY
+where ROW_ID = '1-F2GL24';
+
+//
+select *
+from S_OPTY
+where X_CURRENT_SR_ID = '1-J71RV5';
+
+//
+select ROW_ID, X_QUOTE_ID
+from S_OPTY
+where ROW_ID = '1-F2GL24';
+
+
+//поиск зп клиента
+select X_SALARY
+from S_DOC_QUOTE
+where ROW_ID = '1-F2GDIZ';
+
+
+//обновление зп клиента на "(пусто)"
+UPDATE siebel.S_DOC_QUOTE
+SET X_SALARY = ''
+WHERE ROW_ID = '1-F2GDIZ';
+
+
+//
+select ROW_ID, INCM_EXP_AMT, TYPE_CD, PR_CON_ID
+from S_FN_INCM_EXP
+where PR_CON_ID = '1-E9Y50N' and TYPE_CD = 'Основной'
+
+//
+update siebel.S_FN_INCM_EXP
+set INCM_EXP_AMT = 0
+where ROW_ID = '1-J4UMJR';
+
+
+//
+select ROW_ID, TITLE, FIRM_NAME
+from S_CON_XPERIENCE
+where CON_ID = '1-F2VXWZ'
+
+//
+select *
+from S_CON_XPERIENCE
+where CON_ID = '1-F2VXWZ'
+
+//
+update siebel.S_CON_XPERIENCE
+set TITLE = ''
+where ROW_ID = '1-F2VXXG';
+
+
+//
+select * from S_SYS_PREF
+where SYS_PREF_CD = 'VTB24_SendEmailNavigation'
