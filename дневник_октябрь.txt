@@ -1,0 +1,16 @@
+Project: VTB Card Progress
+View: VTB Contact Card Progress View (добавлен как Aggregate View)
+	Applet: VTB24 Contact Card List Applet Copy (копия апплета VTB24 Contact Card List Applet)
+	Applet: VTB24 SR Registration With Search Spec Form Applet (ничего не изменяла)
+прикреплен к
+Screen: Contacts Screen
+
+Маниф.
+VTB Contact Card Progress View 
+	Physical Renderer
+	siebel/custom/VTB24ApplicationCommonViewPR.js
+	
+VTB24 Contact Card List Applet Copy
+	Theme
+	files/custom/VTB24ContactCardListAppletCopy.css
+	
