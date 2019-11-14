@@ -1,0 +1,8 @@
+14.11.2019
+добавлено: 
+  BC: FINS ATM Card
+    Field: VTB Delivery Address
+    Join: 
+      Alias: VTB Delivery Point Address
+      Table: S_ORG_EXT
+  
