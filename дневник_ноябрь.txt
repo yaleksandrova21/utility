@@ -6,3 +6,14 @@
       Alias: VTB Delivery Point Address
       Table: S_ORG_EXT
   
+18.11.2019
+Создана колонка на таблице
+S_ASSET_XM
+  X_SCHEDULED_DELIVERY
+  ##YALEKSANDROVA 18.11.2019 BR-17968 Плановая дата доставки карты в ДО
+  
+Создано поле на бк
+FINS ATM Card
+  VTB Scheduled Delivery
+  Join: VTB24 Card Logistics Data
+  Column: X_SCHEDULED_DELIVERY
