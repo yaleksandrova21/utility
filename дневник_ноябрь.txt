@@ -17,3 +17,20 @@ FINS ATM Card
   VTB Scheduled Delivery
   Join: VTB24 Card Logistics Data
   Column: X_SCHEDULED_DELIVERY
+
+
+19/11/2019
+для подкраски полей на апплете где статус=Готова
+
+бк: FINS ATM Card
+  поле: VTB Color Row 
+  calculated
+    value: IIf ([VTB24 Card Logistic Status] = 'Готова', 'Green',"")
+ апплет: 
+  контрол: VTB Color Row -> поле VTB Color Row
+  up: 
+    ClientPMUserProp
+      val: Color Field
+    Color Field
+      val: VTB Color Row
+  
