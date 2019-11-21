@@ -34,3 +34,9 @@ FINS ATM Card
     Color Field
       val: VTB Color Row
   
+21/11/2019
+2.2.	Если у клиента, по которому зарегистрирована тематика, есть признак «VIP», то CRM-система отображает кнопку «Просмотр RTF» (см. Рисунок 8)
+Applet: VTB Debit Card Type Of Signing Of Documents Form Applet
+
+бк: Contact
+  VTB24 VIP Flag
