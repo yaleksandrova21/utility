@@ -38,5 +38,12 @@ FINS ATM Card
 2.2.	Если у клиента, по которому зарегистрирована тематика, есть признак «VIP», то CRM-система отображает кнопку «Просмотр RTF» (см. Рисунок 8)
 Applet: VTB Debit Card Type Of Signing Of Documents Form Applet
 
-бк: Contact
+бк: Contact берем инф о вип
   VTB24 VIP Flag
+
+
+22.11.2019
+бк FINS ATM Card
+  создано кальк поле для скрытия кнопки RTF на апплете VTB Debit Card Type Of Signing Of Documents Form Applet
+    VTB Hide Control 
+    value: IIf ([VTB24 Contact VIP Flag] = 'Y', 'RTF', '')
