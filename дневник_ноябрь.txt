@@ -42,8 +42,17 @@ Applet: VTB Debit Card Type Of Signing Of Documents Form Applet
   VTB24 VIP Flag
 
 
-22.11.2019
+22.11.2019 дополнение 25.11.2019
 бк FINS ATM Card
   создано кальк поле для скрытия кнопки RTF на апплете VTB Debit Card Type Of Signing Of Documents Form Applet
     VTB Hide Control 
     value: IIf ([VTB24 Contact VIP Flag] = 'Y', 'RTF', '')
+На апллете создан 
+  control: VTB Hide Control
+  field: VTB Hide Control
+создано UP Hide Control Field
+  value: VTB Hide Control
+Файлы манифеста для апплета 
+VTB Debit Card Type Of Signing Of Documents Form Applet
+  physical renderer
+  siebel/custom/VTB24ExtendedFormPR.js
