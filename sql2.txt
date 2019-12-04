@@ -1,0 +1,10 @@
+//разблокировать проект
+
+update S_PROJECT
+set 
+locked_by = '',
+locked_date = '',
+locked_lang = '',
+locked_flg = 'N'
+where
+repository_id = (select row_id from s_repository where name = 'Siebel Repository') and name='VTB Card Progress'
